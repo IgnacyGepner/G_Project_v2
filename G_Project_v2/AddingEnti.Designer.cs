@@ -35,6 +35,10 @@
             label5 = new Label();
             textBoxName = new TextBox();
             textBox1 = new TextBox();
+            openFileDialog1 = new OpenFileDialog();
+            button1 = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -101,10 +105,34 @@
             textBox1.Size = new Size(125, 27);
             textBox1.TabIndex = 6;
             // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(1014, 74);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 64);
+            button1.TabIndex = 7;
+            button1.Text = "Dodaj zdjęcie";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(631, 46);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(364, 395);
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
+            // 
             // AddingEnti
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(pictureBox1);
+            Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(textBoxName);
             Controls.Add(label5);
@@ -113,7 +141,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "AddingEnti";
-            Size = new Size(550, 350);
+            Size = new Size(1542, 933);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -127,5 +156,8 @@
         private Label label5;
         public TextBox textBoxName;
         public TextBox textBox1;
+        private OpenFileDialog openFileDialog1;
+        private Button button1;
+        public PictureBox pictureBox1;
     }
 }

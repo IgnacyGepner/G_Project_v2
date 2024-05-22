@@ -11,6 +11,8 @@ namespace G_Project_v2
         private string Name { get; set; }
         private string Genere { get; set; }
 
+        private Image BtnImg { get; set; }
+
         public string GetName()
         {
             return Name;
@@ -21,10 +23,11 @@ namespace G_Project_v2
         }
 
 
-        public Entity(string name, string genere)
+        public Entity(string name, string genere, Image image)
         {
         Name = name;
         Genere = genere; 
+        BtnImg = image;
         
         }
 

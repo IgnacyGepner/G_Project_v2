@@ -71,7 +71,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(12, 326);
+            button4.Location = new Point(12, 960);
             button4.Name = "button4";
             button4.Size = new Size(232, 29);
             button4.TabIndex = 4;
@@ -88,30 +88,30 @@
             MenuBtn.Dock = DockStyle.Left;
             MenuBtn.Location = new Point(0, 0);
             MenuBtn.Name = "MenuBtn";
-            MenuBtn.Size = new Size(256, 450);
+            MenuBtn.Size = new Size(256, 1033);
             MenuBtn.TabIndex = 0;
             MenuBtn.TabStop = false;
             MenuBtn.Text = "groupBox1";
             // 
             // MojeZwierzeta
             // 
-            MojeZwierzeta.Location = new Point(250, 0);
+            MojeZwierzeta.Location = new Point(302, 26);
             MojeZwierzeta.Name = "MojeZwierzeta";
-            MojeZwierzeta.Size = new Size(552, 355);
+            MojeZwierzeta.Size = new Size(1542, 933);
             MojeZwierzeta.TabIndex = 1;
             // 
             // katalog1
             // 
-            katalog1.Location = new Point(250, 0);
+            katalog1.Location = new Point(302, 26);
             katalog1.Name = "katalog1";
-            katalog1.Size = new Size(552, 355);
+            katalog1.Size = new Size(1542, 933);
             katalog1.TabIndex = 2;
             // 
             // about1
             // 
-            about1.Location = new Point(250, 0);
+            about1.Location = new Point(302, 26);
             about1.Name = "about1";
-            about1.Size = new Size(552, 365);
+            about1.Size = new Size(1542, 933);
             about1.TabIndex = 5;
             // 
             // Form1
@@ -119,7 +119,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 192);
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1902, 1033);
             Controls.Add(about1);
             Controls.Add(katalog1);
             Controls.Add(MojeZwierzeta);

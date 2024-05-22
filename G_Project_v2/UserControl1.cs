@@ -27,7 +27,7 @@ namespace G_Project_v2
 
         }
 
-        public void AddingEntiBtn(string name, string genere)
+        public void AddingEntiBtn(string name, string genere, Image image)
         {
             eBtn = new Button();
             list.Add(eBtn);
@@ -35,10 +35,11 @@ namespace G_Project_v2
             eBtn.Click += EBtn_Click;
             eBtn.Text = name;
             eBtn.Name = name;
+            eBtn.Image = image;
 
-            eBtn.Width = 100; eBtn.Height = 50;
+            eBtn.Width = 150; eBtn.Height = 150;
             flowLayoutPanel1.Refresh();
-            Entity entity = new Entity(name, genere);
+            Entity entity = new Entity(name, genere, image);
             entiDict.Add(name, entity);
         }
 
@@ -54,7 +55,7 @@ namespace G_Project_v2
 
             private void button1_Click(object sender, EventArgs e)
         {
-            AddingEntiBtn(addingEnti1.textBoxName.Text, addingEnti1.textBox1.Text);
+            AddingEntiBtn(addingEnti1.textBoxName.Text, addingEnti1.textBox1.Text,addingEnti1.pictureBox1.Image);
             addingEnti1.Hide();
             button2.Show();
             button1.Hide();

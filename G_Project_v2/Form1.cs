@@ -9,6 +9,9 @@ namespace G_Project_v2
             InitializeComponent();
             ChangeControls();
             ShowControl();
+            WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = FormBorderStyle.None;
+
 
         }
 
