@@ -36,6 +36,7 @@ namespace G_Project_v2
             eBtn.Text = name;
             eBtn.Name = name;
             eBtn.Image = image;
+            
 
             eBtn.Width = 150; eBtn.Height = 150;
             flowLayoutPanel1.Refresh();

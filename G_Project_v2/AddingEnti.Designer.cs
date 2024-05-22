@@ -38,6 +38,7 @@
             openFileDialog1 = new OpenFileDialog();
             button1 = new Button();
             pictureBox1 = new PictureBox();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -111,7 +112,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(1014, 74);
+            button1.Location = new Point(1448, 17);
             button1.Name = "button1";
             button1.Size = new Size(94, 64);
             button1.TabIndex = 7;
@@ -121,16 +122,26 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(631, 46);
+            pictureBox1.Location = new Point(1116, 17);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(364, 395);
+            pictureBox1.Size = new Size(300, 300);
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(1116, 320);
+            label6.Name = "label6";
+            label6.Size = new Size(183, 20);
+            label6.TabIndex = 9;
+            label6.Text = "zdjęcie musi być 300x300*";
             // 
             // AddingEnti
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label6);
             Controls.Add(pictureBox1);
             Controls.Add(button1);
             Controls.Add(textBox1);
@@ -159,5 +170,6 @@
         private OpenFileDialog openFileDialog1;
         private Button button1;
         public PictureBox pictureBox1;
+        private Label label6;
     }
 }
