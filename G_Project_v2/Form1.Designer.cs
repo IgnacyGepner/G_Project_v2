@@ -95,6 +95,7 @@
             // 
             // MojeZwierzeta
             // 
+            MojeZwierzeta.BackColor = Color.FromArgb(128, 255, 128);
             MojeZwierzeta.Location = new Point(302, 26);
             MojeZwierzeta.Name = "MojeZwierzeta";
             MojeZwierzeta.Size = new Size(1542, 933);

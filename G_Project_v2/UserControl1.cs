@@ -24,43 +24,54 @@ namespace G_Project_v2
             addingEnti1.Hide();
             button1.Hide();
             entiDict = new Dictionary<string,Entity>();
+            entInfo1.Hide();
 
         }
 
-        public void AddingEntiBtn(string name, string genere, Image image)
+        public void AddingEntiBtn(string name, string genere, Image image, int wh, int eLong, DateTime born)
         {
-            eBtn = new Button();
+            eBtn = new CircleButton();
             list.Add(eBtn);
             flowLayoutPanel1.Controls.Add(eBtn);
             eBtn.Click += EBtn_Click;
             eBtn.Text = name;
             eBtn.Name = name;
-            eBtn.Image = image;
-            
-
+            eBtn.BackgroundImage = image;
+            eBtn.BackgroundImageLayout =ImageLayout.Stretch;
+            eBtn.FlatStyle = FlatStyle.Flat; // Usuń standardowe obramowanie
+            eBtn.FlatAppearance.BorderSize = 0; // Wyłącz obramowanie
+            eBtn.Size = new Size(image.Width + 5, image.Height + 5);
             eBtn.Width = 150; eBtn.Height = 150;
             flowLayoutPanel1.Refresh();
-            Entity entity = new Entity(name, genere, image);
+            Entity entity = new Entity(name, genere, image, wh,eLong , born);
             entiDict.Add(name, entity);
         }
 
         private void EBtn_Click(object? sender, EventArgs e)
         {
-            if (sender is Button clickedButton)
+            if (sender is CircleButton clickedButton)
             {
+               entInfo1.Show();
                 string buttonName = clickedButton.Name;
                 if (entiDict.TryGetValue(buttonName, out Entity entity))
-                    MessageBox.Show(entity.GetGen());
-            }
+                    
+                entInfo1.labName.Text = "imie: " + entity.GetName();
+                entInfo1.labGen.Text = "Gatunek: " + entity.GetGen() ;
+                entInfo1.labWh.Text = "Waga: " + entity.getWh();
+                entInfo1.labElong.Text = "Rozmiar: " + entity.GetLong();
+                entInfo1.labBorn.Text = "Data urodzenia: " + (entity.GetBorn()).ToString("dd.MM.yyyy"); ;
+                    }
         }
 
             private void button1_Click(object sender, EventArgs e)
         {
-            AddingEntiBtn(addingEnti1.textBoxName.Text, addingEnti1.textBox1.Text,addingEnti1.pictureBox1.Image);
+            DateTime born = addingEnti1.dateTimePicker1.Value;
+            AddingEntiBtn(addingEnti1.textBoxName.Text, addingEnti1.textBoxELong.Text, addingEnti1.pictureBox1.Image,
+             int.Parse(addingEnti1.textBoxWh.Text), int.Parse(addingEnti1.textBoxELong.Text), born); ;
             addingEnti1.Hide();
             button2.Show();
             button1.Hide();
-            addingEnti1.textBox1.Text = "";
+            addingEnti1.textBoxELong.Text = "";
             addingEnti1.textBoxName.Text = "";
 
         }

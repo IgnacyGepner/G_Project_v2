@@ -21,7 +21,7 @@ namespace G_Project_v2
             {
                 b.BackColor = Color.FromArgb(100, 200, 100);
                 b.Width = 200;
-                b.Height = 70;
+                b.Height = 100;
             }
         }
 

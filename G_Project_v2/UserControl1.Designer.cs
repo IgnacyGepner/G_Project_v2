@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            flowLayoutPanel1 = new FlowLayoutPanel();
             button1 = new Button();
             addingEnti1 = new AddingEnti();
             button2 = new Button();
+            entInfo1 = new EntInfo();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             SuspendLayout();
             // 
             // label1
@@ -44,13 +45,6 @@
             label1.Size = new Size(480, 89);
             label1.TabIndex = 0;
             label1.Text = "Moje zwierzęta";
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.Location = new Point(356, 92);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1163, 738);
-            flowLayoutPanel1.TabIndex = 1;
             // 
             // button1
             // 
@@ -64,7 +58,7 @@
             // 
             // addingEnti1
             // 
-            addingEnti1.Location = new Point(3, 92);
+            addingEnti1.Location = new Point(45, 92);
             addingEnti1.Name = "addingEnti1";
             addingEnti1.Size = new Size(1539, 752);
             addingEnti1.TabIndex = 3;
@@ -79,11 +73,26 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // entInfo1
+            // 
+            entInfo1.Location = new Point(45, 92);
+            entInfo1.Name = "entInfo1";
+            entInfo1.Size = new Size(1928, 1166);
+            entInfo1.TabIndex = 5;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Location = new Point(356, 92);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(1163, 738);
+            flowLayoutPanel1.TabIndex = 1;
+            // 
             // UserControl1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 255, 128);
+            Controls.Add(entInfo1);
             Controls.Add(addingEnti1);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -98,9 +107,10 @@
         #endregion
 
         private Label label1;
-        private FlowLayoutPanel flowLayoutPanel1;
         private Button button1;
         private AddingEnti addingEnti1;
         private Button button2;
+        private EntInfo entInfo1;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }
