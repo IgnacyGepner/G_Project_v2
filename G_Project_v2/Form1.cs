@@ -11,8 +11,6 @@ namespace G_Project_v2
             ShowControl();
             WindowState = FormWindowState.Maximized;
             this.FormBorderStyle = FormBorderStyle.None;
-
-
         }
 
         void ChangeControls()
@@ -20,8 +18,11 @@ namespace G_Project_v2
             foreach (Button b in MenuBtn.Controls)
             {
                 b.BackColor = Color.FromArgb(100, 200, 100);
-                b.Width = 200;
+                b.Width = 350;
                 b.Height = 100;
+                b.FlatStyle = FlatStyle.Flat;
+                b.FlatAppearance.BorderSize = 0;
+                b.Font = new Font(b.Font.FontFamily, 20);
             }
         }
 

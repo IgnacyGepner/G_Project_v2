@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             labName = new Label();
             labGen = new Label();
             labBorn = new Label();
             labWh = new Label();
             labElong = new Label();
             button1 = new Button();
+            entityBindingSource = new BindingSource(components);
+            ((System.ComponentModel.ISupportInitialize)entityBindingSource).BeginInit();
             SuspendLayout();
             // 
             // labName
@@ -88,13 +91,17 @@
             // 
             // button1
             // 
-            button1.Location = new Point(1164, 517);
+            button1.Location = new Point(952, 636);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(146, 46);
             button1.TabIndex = 5;
             button1.Text = "Powrót";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            // 
+            // entityBindingSource
+            // 
+            entityBindingSource.DataSource = typeof(Entity);
             // 
             // EntInfo
             // 
@@ -108,6 +115,7 @@
             Controls.Add(labName);
             Name = "EntInfo";
             Size = new Size(1542, 933);
+            ((System.ComponentModel.ISupportInitialize)entityBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -123,5 +131,6 @@
         public Label labWh;
         public Label labElong;
         private Button button1;
+        private BindingSource entityBindingSource;
     }
 }

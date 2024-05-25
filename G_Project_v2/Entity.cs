@@ -29,7 +29,7 @@ namespace G_Project_v2
         BtnImg = image;
         Long = elong;        
         Born = born;
-            Wh = wh;
+        Wh = wh;
         }
     }
 }

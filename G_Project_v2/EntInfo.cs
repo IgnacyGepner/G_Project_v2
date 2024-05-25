@@ -21,5 +21,10 @@ namespace G_Project_v2
         {
             Hide();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
